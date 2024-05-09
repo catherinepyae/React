@@ -3,4 +3,18 @@ cd React
 //testing with "CDN" first by not downloading "React"
 CDN.html //but for production, might need to set up React Environment
 CDN_queryselector.html //use "query selector" instead of "get ElementbyId" and no need to create root also, 
-instead, render with "Componenet and "queryselector's variable".
+instead, render with "Component and "queryselector's variable".
+//Create "React" Environment
+//to create, need to download "node.js" so that can use npx
+//note: by integrating node.js, also accepted to install chocolatory
+//Alert: there was a problem which is the system can't be able to find the file path when use "npx create-react-app <app name>"
+//Solution : create folder name "npm" in this directory "C:\Users\Sophie\AppData\Roaming\"
+npx create-react-app first
+//first>src>app.js
+//<h1>Hello World</h1>
+Component
+----------------
+class Component
+function Component
+
+
