@@ -1,0 +1,38 @@
+If you already have an SSH key and want to use it to access GitHub repositories from the terminal in Windows, you can follow these steps:
+
+1. **Locate Your SSH Key**:
+   - By default, SSH keys are usually stored in the `.ssh` directory in your user's home directory. In Windows, this is typically located at `C:\Users\YourUsername\.ssh`.
+   - Your SSH key files are usually named `id_rsa` (private key) and `id_rsa.pub` (public key). If you have a different name, adjust the commands accordingly.
+
+2. **Add SSH Key to SSH Agent**:
+   - Open the terminal in Windows (Command Prompt or PowerShell).
+   - Start the SSH agent by running the following command:
+     ```
+     ssh-agent -s
+     ```
+   - Add your SSH private key to the SSH agent by running the following command:
+     ```
+     ssh-add C:\Users\YourUsername\.ssh\id_rsa
+     ```
+   - Replace `C:\Users\YourUsername\.ssh\id_rsa` with the path to your SSH private key.
+
+3. **Copy Public Key to GitHub**:
+   - Open the public key file (`id_rsa.pub`) in a text editor or use a command-line tool to display its contents.
+   - Copy the entire contents of the public key.
+
+4. **Add SSH Key to GitHub**:
+   - Go to your GitHub account settings.
+   - Navigate to the "SSH and GPG keys" section.
+   - Click on "New SSH key" or "Add SSH key".
+   - Paste the copied SSH key into the "Key" field.
+   - Give your SSH key a descriptive title.
+   - Click "Add SSH key".
+
+5. **Test SSH Connection**:
+   - To verify that your SSH key is set up correctly, you can test your SSH connection to GitHub using the following command:
+     ```
+     ssh -T git@github.com
+     ```
+   - If your SSH key is set up properly, you should see a message indicating successful authentication.
+
+By following these steps, you'll be able to use your SSH key to authenticate with GitHub from the terminal in Windows and access repositories without needing to enter your GitHub username and password each time.
