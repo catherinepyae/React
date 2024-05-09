@@ -1,0 +1,6 @@
+git clone https://github.com/catherinepyae/React.git
+cd React
+//testing with "CDN" first by not downloading "React"
+CDN.html //but for production, might need to set up React Environment
+CDN_queryselector.html //use "query selector" instead of "get ElementbyId" and no need to create root also, 
+instead, render with "Componenet and "queryselector's variable".
