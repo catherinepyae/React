@@ -5,6 +5,7 @@ CDN.html //but for production, might need to set up React Environment
 CDN_queryselector.html //use "query selector" instead of "get ElementbyId" and no need to create root also, 
 instead, render with "Component and "queryselector's variable".
 //Create "React" Environment
+//in production, need Node.js and also npm
 //to create, need to download "node.js" so that can use npx
 //note: by integrating node.js, also accepted to install chocolatory
 //Alert: there was a problem which is the system can't be able to find the file path when use "npx create-react-app <app name>"
@@ -12,9 +13,28 @@ instead, render with "Component and "queryselector's variable".
 npx create-react-app first
 //first>src>app.js
 //<h1>Hello World</h1>
+
 Component
 ----------------
-class Component
-function Component
+class Component -> must include extends React.Component. This create an inheritance to React.Component, and gives your component access to React.Component's functions
+This also require "render()" method. 
+function Component -> same effect with class component, but it can be written using much less code, easier to understand
+see "Car.js"
+
+Props
+-----
+Component can be passed as props(properties)
+//Cars.js
+function Cars(props){
+    return <h1>We are cars {props.color}</h1>
+}
+export default Cars;
+//index.js
+<Cars color="red" />
+
+At different laptop
+------------------
+got to solve error with "npm install"
+
 
 
