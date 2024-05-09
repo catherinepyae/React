@@ -1,0 +1,28 @@
+If you're still encountering the "Permission denied" error even after changing the remote URL and ensuring that "Hein1752" is not listed as a collaborator, there might be a few additional steps you can take to resolve this issue:
+
+1. **Verify Git Configurations**:
+   Ensure that your local Git configurations are correct, especially your Git credentials. Sometimes, Git might still be using cached credentials or configurations associated with the previous user.
+
+   You can verify and update your Git configurations using the following commands:
+   ```
+   git config --global user.name "Your Name"
+   git config --global user.email "youremail@example.com"
+   ```
+
+2. **Credential Manager**:
+   If you're using Git Credential Manager for Windows or another credential manager, it might still have cached credentials associated with the previous user. Try clearing the cached credentials or re-authenticating with your GitHub account.
+
+3. **HTTPS vs. SSH**:
+   Consider using SSH instead of HTTPS for authentication. SSH authentication doesn't rely on cached credentials and might provide a more reliable way to authenticate with GitHub.
+
+   You can switch the remote URL from HTTPS to SSH using the following command:
+   ```
+   git remote set-url origin git@github.com:catherinepyae/React.git
+   ```
+
+   Make sure you have set up SSH keys and added them to your GitHub account as described earlier.
+
+4. **Temporary Issue**:
+   Sometimes, issues like these can be temporary and caused by network glitches or GitHub service disruptions. Wait for some time and try again later.
+
+If none of these solutions resolve the issue, it might be worth reaching out to GitHub support for further assistance. They can help troubleshoot and identify any underlying issues with permissions or access to your repository.
